@@ -59,16 +59,16 @@
 
 //------- Replace the following! ------
 
-char ssid[] = "SSID";         // your network SSID (name)
-char password[] = "password"; // your network password
+char ssid[] = "Nawa Living";  // your network SSID (name)
+char password[] = "nawasena"; // your network password
 
-char clientId[] = "56t4373258u3405u43u543";     // Your client ID of your spotify APP
-char clientSecret[] = "56t4373258u3405u43u543"; // Your client Secret of your spotify APP (Do Not share this!)
+char clientId[] = "c6f2e67406724a7a94e5c037066076de";     // Your client ID of your spotify APP
+char clientSecret[] = "8877d3b7bebd46b9a31a9482a2301add"; // Your client Secret of your spotify APP (Do Not share this!)
 
 // Country code, including this is advisable
 #define SPOTIFY_MARKET "IE"
 
-#define SPOTIFY_REFRESH_TOKEN "AAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDD"
+#define SPOTIFY_REFRESH_TOKEN "AQDin7Io11elBmOti8dYpgVTOmocTMeVQAt365vYEWVhHgYVXvytAuQaiXSTjSX1ZCPIOM28gyHtKCFjMg427czQlHArRRg5O-A3CKpKuJlt1oVT77FXLFNiBlXeswBMb38"
 
 //------- ---------------------- ------
 

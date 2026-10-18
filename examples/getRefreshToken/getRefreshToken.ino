@@ -85,24 +85,15 @@
 
 //------- Replace the following! ------
 
-char ssid[] = "SSID";         // your network SSID (name)
-char password[] = "password"; // your network password
+char ssid[] = "Nawa Living";  // your network SSID (name)
+char password[] = "nawasena"; // your network password
 
-char clientId[] = "56t4373258u3405u43u543";     // Your client ID of your spotify APP
-char clientSecret[] = "56t4373258u3405u43u543"; // Your client Secret of your spotify APP (Do Not share this!)
+char clientId[] = "c6f2e67406724a7a94e5c037066076de";     // Your client ID of your spotify APP
+char clientSecret[] = "8877d3b7bebd46b9a31a9482a2301add"; // Your client Secret of your spotify APP (Do Not share this!)
 
 char scope[] = "user-read-playback-state%20user-modify-playback-state";
 
-#define USE_IP_ADDRESS 1 //comment this out if you want to use MDNS
-
-#ifdef USE_IP_ADDRESS
-char callbackURItemplate[] = "%s%s%s";
-char callbackURIProtocol[] = "http%3A%2F%2F"; // "http://"
-char callbackURIAddress[] = "%2Fcallback%2F"; // "/callback/"
-char callbackURI[100];
-#else
-char callbackURI[] = "http%3A%2F%2Farduino.local%2Fcallback%2F";
-#endif
+char callbackURI[] = "https%3A%2F%2Fcontinued-metal-query-wolf.trycloudflare.com%2Fcallback%2F";
 
 //------- ---------------------- ------
 
@@ -220,11 +211,6 @@ void setup()
 
   // If you want to enable some extra debugging
   // uncomment the "#define SPOTIFY_DEBUG" in SpotifyArduino.h
-
-#ifdef USE_IP_ADDRESS
-  // Building up callback URL using IP address.
-  sprintf(callbackURI, callbackURItemplate, callbackURIProtocol, ipAddress.toString().c_str(), callbackURIAddress);
-#endif
 
   server.on("/", handleRoot);
   server.on("/callback/", handleCallback);
